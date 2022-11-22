@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body{
+            background-color: #0000002f;
+        }
+
+        header{
+            color: white;
+            text-align: center;
+            font: normal 13pt Arial;
+            padding: 20px;
+        }
+
+        article{
+            background-color: azure;
+            padding: 20px;
+            width: 400px;
+            margin: auto;
+            border-radius: 25px;
+            font: normal 15pt Arial;
+        }
+
+        #ano{
+            margin: 20px;
+        }
+
+        #sexo{
+            margin: 20px;
+            padding: 5px 0px;
+            
+        }
+        
+        #res{
+            margin: 20px;
+            padding-bottom: 20px;
+            font-size: 12pt;
+        }
+
+        img{
+            padding: 10px;
+        }
+        
+        input[type=button]{
+            width: 100px;
+            height: 20px;
+
+        }
+        
+        
+        footer{
+            color: white;
+            text-align: center;
+            font: normal 18pt Arial;
+            padding: 20px;
+        }
+
+        #vejaMais{
+            color: white;
+            text-align: center;
+            font: normal 18pt Arial;
+            padding: 20px;
+        }
+                
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vamos conhecer o seu Pokemon preferido?</h1>
+    </header>
+    <article>
+        <div id="busca">
+            Digite o nome do seu Pokemon! <input type="text" id="poke"> <br>
+            <input type="button" value="Verificar" onclick="verificar()">
+        </div>    
+
+        <div id="res">
+            
+        </div>
+        <div id="imagem">
+            <img id="foto" src="imagens/bulbasaur.png" alt="">
+
+        </div>
+
+    </article>
+
+    <footer>
+        <a href="Guilherme Pires DEV" target="#"></a> GitHub - Guilhermepiresdev
+    </footer>
+
+    <script>
+
+        function verificar(){
+            var txtpokemon = document.getElementById("poke")
+            var img = document.getElementById("foto")
+            var res = document.getElementById("res")
+            var pokemon = (txtpokemon.value)
+            res.innerHTML = `Seu pokemon é <strong>${pokemon}</strong>`
+            if(pokemon == "onix"){
+                img.src = "imagens/onix.png"
+            } else if (pokemon == "bulbasaur"){
+                img.src = "imagens/bulbasaur.png"
+            } else if (pokemon == "Picachu"){                
+                img.src = "imagens/Picachu.png"
+            } else {
+                console.log("Não encontrei o Pokemon")
+                }
+
+        }
+    </script>
+<a id="vejaMais" href="pagina2.html" target="_blank">Veja mais!</a>
+
+</body>
+</html>
